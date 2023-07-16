@@ -9,12 +9,13 @@ environment:
   sdk: ">=2.17.1 <3.0.0"
 
 dependencies:
+  fitbitter: 2.0.1
   flutter:
     sdk: flutter
 
   # ------- FITBITTER 
-  fitbitter:
-    path: ../
+  #fitbitter:
+  #  path: ../
   # --------------------
     
   # ----- SHAREDPREFERENCES

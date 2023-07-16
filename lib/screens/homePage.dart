@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../utils/strings.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   static const route = '/';
   static const routename = 'HomePage';
@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
     print('${HomePage.routename} built');
     return Scaffold(
       appBar: AppBar(
-        title: Text(HomePage.routename),
+        title: const Text(HomePage.routename),
       ),
       body: Center(
         child: Column(
@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                 //Fetch yesterday's data
                 final spO2Data =
                     await fitbitSpO2DataManager.fetch(FitbitSpO2APIURL.day(
-                  date: DateTime.now().subtract(Duration(days: 1)),
+                  date: DateTime.now().subtract(const Duration(days: 1)),
                   fitbitCredentials: fitbitCredentials!,
                 )) as List<FitbitSpO2Data>;
                 print(spO2Data);
@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
               },
-              child: Text('Tap to authorize and fetch data'),
+              child: const Text('Tap to authorize and fetch data'),
             ),
           ],
         ),
